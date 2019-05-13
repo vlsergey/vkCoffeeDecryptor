@@ -47,6 +47,7 @@ export default class DecryptForm extends PureComponent {
     event.preventDefault();
     try {
       let { src } = this.state;
+      src = src.trim();
       src = src.replace( /VK C0 FF EE/gi, '' );
       src = src.replace( /PP/gi, '' );
       src = src.replace( /AP ID 0G/gi, '' );
